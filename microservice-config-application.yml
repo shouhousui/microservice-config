@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active: dev #激活开发环境
+	
+server:
+  port: 5001
+spring:
+  profiles: dev
+  application:
+    name: microservice-config-service-dev
+  cloud:
+    config:
+      server:
+        git: # 远程库的git地址
+          uri: https://github.com/lckj/microservice-config.git
+		  
+server: 
+  port:5001
+spring:
+  profiles: prd
+  application: 
+    name: microservice-config-service-prd
+	
